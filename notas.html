@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Notas de Arti · no compartir</title><link rel="stylesheet" href="taller.css"><link rel="icon" href="assets/favicon.svg"><style>
+body{padding:clamp(20px,5vw,40px);max-width:800px;margin:auto}header{border-bottom:1px solid var(--borde);padding-bottom:16px}.folio{color:var(--agua)}h1{font-size:36px;margin-top:15px}h2{font-size:18px;margin:26px 0 10px;color:var(--gris)}p{font-size:15px;line-height:1.65}.aviso{font-size:12px;color:var(--gris)}.pasos{margin-top:26px}.pasos button{padding:0 12px;border-radius:5px;font-size:13px}
+#guion{white-space:pre-line}
+</style></head><body>
+<header><span class="folio">Ventana del presentador · <span id="giro"></span></span><p class="aviso">En Meet, comparte solo la pestaña de diapositivas. No compartas esta ventana ni el escritorio completo.</p></header>
+<main aria-live="polite"><h2 id="cuenta">Notas de Arti</h2><h1 id="titulo">Abre «Notas» desde la presentación.</h1><p class="bajada" id="guion"></p><h2>A continuación</h2><p id="sigue">—</p></main><div class="pasos"><button id="anterior" disabled>← Anterior</button><button id="siguiente" disabled>Siguiente →</button><button id="precios" disabled>Mostrar precios</button></div>
+<script type="module">
+const campo = id => document.getElementById(id);
+const giro = new URL(location.href).searchParams.get('giro') || 'general';
+function enviar(tipo) { if (window.opener && !window.opener.closed) window.opener.postMessage(tipo,location.origin); }
+window.addEventListener('message', ev => {
+  if (ev.source !== window.opener || ev.origin !== location.origin || ev.data?.tipo !== 'lamina' || ev.data.giro !== giro) return;
+  campo('giro').textContent = ev.data.nombreGiro;
+  campo('precios').disabled = false;
+  campo('precios').textContent = ev.data.conPrecios ? 'Ocultar precios' : 'Mostrar precios';
+  const {indice,total,titulo,nota,sigue} = ev.data;
+  campo('cuenta').textContent = `Lámina ${indice+1} de ${total}`;
+  campo('titulo').textContent = titulo;
+  campo('guion').textContent = nota;
+  campo('sigue').textContent = sigue || 'Fin de la presentación';
+  campo('anterior').disabled = indice === 0;
+  campo('siguiente').disabled = indice === total - 1;
+});
+for (const id of ['anterior','siguiente','precios']) campo(id).addEventListener('click', () => enviar(id));
+window.addEventListener('keydown', ev => {
+  if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
+  const comando = {ArrowRight:'siguiente',ArrowLeft:'anterior',p:'precios',P:'precios'}[ev.key];
+  if (comando) { ev.preventDefault(); if (!ev.repeat) enviar(comando); }
+});
+enviar('lista');
+</script></body></html>

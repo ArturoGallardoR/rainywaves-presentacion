@@ -1,0 +1,128 @@
+@font-face {font-family:Tilt;src:url('fonts/TiltNeon.ttf') format('truetype');font-display:swap}
+@font-face {font-family:Martian;src:url('fonts/MartianMono-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face {font-family:Martian;src:url('fonts/MartianMono-600.woff2') format('woff2');font-weight:600;font-display:swap}
+:root {
+  color-scheme:dark; --noche:#120d2b; --texto:#f3f3f5; --vidrio:#cfc9ec; --gris:#b4adc4;
+  --rosa:#ff2e88; --agua:#27e3c4; --borde:#49405e; --pad:clamp(22px,5vw,110px);
+  background:var(--noche);color:var(--texto);font-family:Martian,ui-monospace,monospace;
+}
+* {box-sizing:border-box}
+body {margin:0;min-height:100svh;background:radial-gradient(ellipse at 84% 40%,#38204666,transparent 54%),var(--noche)}
+[hidden] {display:none!important}
+a {color:inherit;text-underline-offset:4px}
+a,button {touch-action:manipulation}
+button {color:inherit;font:inherit;border:1px solid var(--borde);background:none;cursor:pointer}
+a:focus-visible,button:focus-visible {outline:2px solid var(--agua);outline-offset:3px}
+.slide :is(h1,h2)[tabindex="-1"]:focus {outline:none}
+h1,h2,h3,p,figure,dl,dd,ol {margin:0}
+h1,h2,h3,.comparativa strong,.casos strong {font-family:Tilt,ui-rounded,system-ui,sans-serif;font-weight:400}
+h1,h2 {line-height:.99;letter-spacing:-.035em}
+h1 {font-size:clamp(62px,min(6.5vw,11.7vh),148px)}
+h1 em {display:block}
+h2 {font-size:clamp(46px,min(5.4vw,10.4vh),120px)}
+h3 {font-size:clamp(27px,2.55vw,55px);line-height:1.1}
+em {color:var(--rosa);font-style:normal}
+.barra {border-bottom:1px solid var(--borde)}
+.barra-in,.pie-in,.interior {max-width:1920px;margin:auto;padding-inline:var(--pad)}
+.barra-in,.pie-in,.herramientas,.pasos,.contactos,.cab-indice {display:flex;align-items:center}
+.barra-in {min-height:clamp(62px,9vh,94px);gap:24px}
+.marca,.marca img {display:block}
+.tipo,.folio,.firma,.rotulo,.mini,.capitulos a,.herramientas,.plano figcaption span {font-size:clamp(11px,.85vw,17px);letter-spacing:.04em}
+.tipo {border-left:1px solid var(--borde);padding:6px 0 6px 24px;color:var(--gris)}
+.herramientas {margin-left:auto;gap:7px}
+.herramientas button,.indice,.contactos a {min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--borde);border-radius:5px;text-decoration:none;padding:0 14px}
+.herramientas svg {width:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.herramientas :is(button,a):hover,.pasos button:hover:not(:disabled),.contactos a:hover {border-color:var(--vidrio);background:#cfc9ec0b}
+.presentando {display:flex;flex-direction:column}
+.presentando main {flex:1;display:flex}
+.slide {width:100%;border-bottom:1px solid var(--borde)}
+.presentando .slide {display:flex;align-items:center;border:none}
+.interior {width:100%;padding-block:clamp(22px,4.2vh,72px)}
+.portada,.perfil {display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,4.5vw,95px);align-items:center}
+.sello {display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:clamp(16px,3vh,32px);font-size:clamp(11px,.92vw,18px);color:var(--gris);line-height:1.4}
+.sello b {display:inline-flex;align-items:center;gap:8px;color:var(--agua)}
+.sello b:before,.firma i {content:'';width:7px;height:7px;display:inline-block;border-radius:50%;background:var(--agua);box-shadow:0 0 9px #27e3c460}
+.sello span:before {content:'/';margin-right:12px;color:#91889f}
+.bajada,.casos p,.pares dd,.etapas p,.ficha p {font-size:clamp(17px,1.42vw,32px);line-height:1.54;color:var(--vidrio)}
+.bajada {max-width:65ch;margin-top:clamp(18px,3vh,36px)}
+.firma {margin-top:clamp(18px,3.8vh,48px);color:var(--gris);display:flex;align-items:center;gap:10px}
+.plano {position:relative;border:1px solid var(--borde);border-radius:4px;padding:clamp(14px,1.4vw,28px);background:radial-gradient(ellipse at center,#48284650,transparent 70%),linear-gradient(90deg,#b195e00c 1px,transparent 1px),linear-gradient(#b195e00c 1px,transparent 1px),#17122e;background-size:auto,26px 26px,26px 26px,auto}
+.rotulo,.plano figcaption {display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rotulo,.plano figcaption span {color:var(--gris)}
+.rotulo span:first-child:before {content:'';display:inline-block;vertical-align:middle;width:16px;height:1px;background:var(--rosa);margin-right:8px}
+.maqueta {position:relative;aspect-ratio:620/410;max-height:52vh;margin:0 auto;width:100%}
+.maqueta img,.maqueta canvas {display:block;width:100%;height:100%;object-fit:contain}
+.maqueta canvas {position:absolute;inset:0;pointer-events:none}
+.plano figcaption {border-top:1px solid var(--borde);padding-top:12px;font:clamp(17px,1.5vw,31px) Tilt,system-ui}
+.plano figcaption span {font-family:Martian,monospace}
+.folio,.mini {color:var(--gris)}
+.pausa h2,.cierre h2 {max-width:18ch;font-size:clamp(58px,min(7.3vw,14vh),160px);margin-top:16px}
+#resultado .sello span {color:var(--vidrio);font-weight:600;font-size:clamp(16px,1.75vw,30px)}
+.comparativa {display:flex;align-items:center;gap:clamp(14px,2vw,36px);border-top:1px solid var(--borde);padding-top:18px;margin-top:clamp(20px,3vh,42px)}
+.comparativa small {display:block;font-size:clamp(12px,1vw,18px);color:var(--gris)}
+.comparativa strong {display:block;font:inherit;font-size:clamp(15px,1.4vw,24px);color:var(--vidrio);margin-top:6px}
+.comparativa>span {color:var(--gris)}
+.casos,.etapas {display:grid;gap:clamp(16px,2.2vw,40px);margin-top:clamp(25px,5vh,65px)}
+.casos {grid-template-columns:repeat(3,minmax(0,1fr))}
+.casos a {display:inline-flex;align-items:center;min-height:44px;color:var(--vidrio);font-size:clamp(12px,1vw,20px);margin-top:12px}
+.aclaracion {color:var(--gris);font-size:clamp(14px,1.1vw,21px);margin-top:12px}
+.pausa h2 {max-width:24ch;font-size:clamp(48px,min(5.9vw,10vh),118px);text-wrap:balance}
+.casos article,.ficha {border:1px solid var(--borde);border-radius:4px;padding:clamp(20px,2.2vw,45px);background:linear-gradient(120deg,#281d3a,#1b152e)}
+.casos h3 {margin:16px 0 10px}
+.casos strong {display:block;border-top:1px solid var(--borde);margin-top:20px;padding-top:14px;font-size:clamp(28px,3.3vw,65px);color:var(--vidrio)}
+.pares {margin-top:clamp(20px,4vh,50px)}
+.pares div {display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px;padding:clamp(14px,2.6vh,32px) 0;border-top:1px solid var(--borde)}
+.pares dt {font:clamp(25px,2.4vw,48px) Tilt,system-ui}
+.etapas {grid-template-columns:repeat(3,1fr);list-style:none;padding:0}
+.etapas li {border-top:1px solid var(--borde);padding-top:16px}
+.etapas li>span {font:clamp(40px,4vw,85px) Tilt;color:var(--rosa)}
+.etapas h3 {margin:12px 0}
+.ficha {justify-self:end;width:min(100%,560px)}
+.ficha img {display:block;margin:20px 0 16px}
+.ficha .firma {font-size:clamp(13px,1.1vw,23px);padding-top:15px;border-top:1px solid var(--borde)}
+.cierre {text-align:center;background:radial-gradient(ellipse at 50% 80%,#ff2e8815,transparent 60%)}
+.cierre h2,.cierre .bajada {margin-inline:auto}
+.cierre .sello,.contactos {justify-content:center}
+.correo {display:inline-block;margin-top:24px;max-width:100%;overflow-wrap:anywhere;font-size:clamp(18px,2vw,40px);color:var(--vidrio)}
+.contactos {margin-top:16px;gap:10px;font-size:clamp(12px,.95vw,20px)}
+footer {border-top:1px solid var(--borde);background:#100d22}
+.pie-in {min-height:clamp(65px,10vh,110px);gap:clamp(18px,3vw,55px)}
+.contador {display:grid;gap:5px;font-size:13px;white-space:nowrap;color:var(--gris)}
+.contador b {color:var(--texto)}
+.capitulos {flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:7px}
+.capitulos a {position:relative;color:var(--gris);text-decoration:none;min-height:44px;padding:17px 0 5px}
+.capitulos a:before {content:'';position:absolute;inset:5px 0 auto;height:2px;background:#453b57}
+.capitulos a[aria-current] {color:var(--texto)}
+.capitulos a[aria-current]:before {background:var(--rosa);box-shadow:0 0 8px #ff2e8835}
+.pasos {gap:7px}
+.pasos button,.cab-indice button {min-width:44px;height:44px;border-radius:50%;font-size:20px}
+.pasos button:disabled {opacity:.35;cursor:default}
+dialog {padding:clamp(22px,3vw,40px);background:var(--noche);color:var(--texto);border:1px solid var(--borde);border-radius:5px;width:min(530px,92vw);max-height:90svh}
+dialog::backdrop {background:#090615ca;backdrop-filter:blur(5px)}
+.cab-indice {justify-content:space-between}
+dialog h2 {font-size:36px;margin:15px 0 20px}
+dialog nav a {display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;border-top:1px solid var(--borde);text-decoration:none;font-size:15px}
+dialog nav a span {color:var(--gris);font-size:11px}
+dialog nav a[aria-current] {color:var(--rosa)}
+:fullscreen .herramientas,:fullscreen .capitulos {display:none}
+:fullscreen .pie-in {justify-content:space-between;min-height:54px}
+:fullscreen .contador {display:flex;gap:9px}
+@media(max-width:920px) {.capitulos a{font-size:10px}.pie-in{gap:15px}.barra-in{gap:16px}}
+@media(max-width:700px) {
+  /* En fichas largas se desplaza el contenido, no los controles de avance. */
+  body.presentando {height:100svh;min-height:0}
+  .presentando main {min-height:0;overflow-y:auto;display:block}
+  .presentando .slide {min-height:100%}
+  .tipo {display:none}.barra-in{min-height:63px;gap:8px}.marca img{width:125px;height:48px}.herramientas{gap:3px}.herramientas button,.indice{padding:0 8px}
+  .portada,.perfil,.casos,.etapas {grid-template-columns:1fr}.portada,.perfil{gap:22px}.interior{padding-block:27px}
+  h1 {font-size:clamp(54px,12vw,78px)}h2,.pausa h2,.cierre h2{font-size:clamp(43px,10vw,68px)}
+  .bajada,.casos p,.pares dd,.etapas p,.ficha p{font-size:16px}.sello{gap:6px;font-size:10px}.sello span:before{margin-right:5px}.firma{margin-top:15px}
+  .plano{max-width:480px;width:100%;justify-self:center}.plano figcaption span,.rotulo{font-size:10px}
+  .pares div{grid-template-columns:1fr;gap:7px}.etapas li>span{font-size:28px}.etapas h3{margin:6px 0}.ficha{justify-self:start}
+  .presentando footer{position:sticky;bottom:0;z-index:2}.presentando .capitulos{display:none}.capitulos{display:flex;flex-wrap:wrap}.pie-in{min-height:62px}.contador{display:flex;gap:9px}.pasos{margin-left:auto}
+}
+@media(max-width:390px) {
+  .marca {width:48px;height:48px;background:url('assets/favicon.svg') center / 36px no-repeat}
+  .marca img {display:none}
+}
+@media(prefers-reduced-motion:reduce) {*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}

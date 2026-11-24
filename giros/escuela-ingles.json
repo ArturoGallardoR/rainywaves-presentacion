@@ -1,0 +1,46 @@
+{
+  "nombre": "Escuela de inglés",
+  "portada": "Soy Arti Gallardo. En mi taller construyo herramientas para que tu escuela deje de hacer a mano lo que se repite, empezando por las inscripciones.",
+  "ocultar": [3],
+  "agenda": "https://cal.com/arturo-gallardo-glz9da/15min",
+  "pregunta": {
+    "titulo": "¿Qué te quita más tiempo hoy: contestar lo mismo o llevar las inscripciones?",
+    "enfasis": "contestar lo mismo o llevar las inscripciones?",
+    "apoyo": "Piensa en la última persona que te preguntó por informes.",
+    "nota": "Escucha primero y deja que te cuente con calma. Si menciona los mensajes que contesta todo el día, no prometas nada sobre eso; reconduce a ordenar lo de atrás: inscripciones, grupos y pagos."
+  },
+  "caso": {
+    "titulo": "Un dato, una sola captura.",
+    "enfasis": "una sola captura.",
+    "sello": "un caso real, tiempos aproximados",
+    "antes": "4 h",
+    "despues": "1 min",
+    "apoyo": "Tiempo diario para registrar de 5 a 10 prospectos de LinkedIn en Odoo, el sistema donde ese equipo lleva a sus clientes.",
+    "aclaracion": "No es una promesa: es lo que pasó en otro negocio.",
+    "nota": "Si la enseñas, aclara que es de otro negocio. Pregunta a Valeria dónde vuelve a escribir los datos del alumno."
+  },
+  "ayuda": {
+    "filas": [
+      ["Me preguntan lo mismo una y otra vez", "Una página con horarios, niveles y requisitos a la vista."],
+      ["Las inscripciones llegan dispersas", "Un formulario que las ordena en una sola hoja."],
+      ["No sé quién está en qué grupo ni quién ya pagó", "Un panel sencillo con alumnos, grupos y pagos."]
+    ],
+    "nota": "Lee cada fila y pregúntale cuál le suena más. Quédate en la que elija; no hace falta resolver las tres hoy."
+  },
+  "precios": {
+    "titulo": "Empezamos por lo que necesitas.",
+    "paquetes": ["basico", "intermedio"],
+    "resumen": {"basico": "Web, preinscripción y ficha de Google.", "intermedio": "Básico más un panel de alumnos, grupos y pagos."},
+    "destacado": "intermedio",
+    "servicios": ["ficha-mensual", "seo-local"],
+    "pie": "Precios en MXN, sin IVA. Anticipo del {anticipo} %.",
+    "notaFactura": "Si necesitas factura, se agrega IVA.",
+    "nota": "Muéstrala solo después de preguntar: ¿tienes un rango en mente para invertir en esto?"
+  },
+  "cierre": {
+    "titulo": "Lo siguiente es sencillo.",
+    "enfasis": "sencillo.",
+    "apoyo": "Cómo te llegan hoy las inscripciones y qué información piden más veces. Con eso te mando la propuesta por escrito.",
+    "nota": "Pide esos dos datos y acuerda por correo cuándo le mandas la propuesta. No cierres nada en la llamada."
+  }
+}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 410" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<title>El taller encendido de rainywaves</title>
+<style>
+ @media (prefers-reduced-motion:no-preference) {
+   [stroke="#ff2e88"],[stroke="#ff559b"],[stroke="#ef6097"],[stroke="#ffd0de"],[stroke="#ff569e"] {animation:tubo 2.6s ease-out both}
+   [fill="url(#glass)"],[fill="url(#sideglass)"] {animation:ventana 2.8s ease-out both}
+ }
+ @keyframes tubo {0%,12%{opacity:.1}35%{opacity:.65}45%{opacity:.5}85%,100%{opacity:1}}
+ @keyframes ventana {0%{opacity:.32}100%{opacity:1}}
+</style>
+<defs>
+ <linearGradient id="roof" x2=".8" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#6b5677"/><stop offset="1" stop-color="#322541"/></linearGradient>
+ <linearGradient id="front" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#433148"/><stop offset="1" stop-color="#23192f"/></linearGradient>
+ <linearGradient id="glass" x2="1" y2=".7" gradientUnits="objectBoundingBox"><stop stop-color="#4b2945"/><stop offset=".45" stop-color="#cb5e82"/><stop offset=".68" stop-color="#e58c9e"/><stop offset="1" stop-color="#63334e"/></linearGradient>
+ <linearGradient id="sideglass" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#563348"/><stop offset="1" stop-color="#c77688"/></linearGradient>
+ <radialGradient id="puddle"><stop stop-color="#ff2e88" stop-opacity=".25"/><stop offset="1" stop-color="#ff2e88" stop-opacity="0"/></radialGradient>
+ <pattern id="tiles" width="22" height="10" patternUnits="userSpaceOnUse"><path d="M0 0h22M0 0v10" stroke="#a68ca5" stroke-opacity=".24" stroke-width=".75"/></pattern>
+ <pattern id="grille" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 1h4" stroke="#a995b2" stroke-width="1"/></pattern>
+ <filter id="bloom" x="-40%" y="-60%" width="180%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+ <g id="stool" stroke="#412538" stroke-width="2"><path d="M0 0v14m-7 1h14"/><ellipse rx="7.5" ry="2.5" fill="#713a52"/></g>
+ <g id="lamp"><path d="M0 0v10" stroke="#452337"/><path d="m-8 16 4-7h8l4 7z" fill="#483144"/><path d="M-6 16H6" stroke="#ffdfcb" stroke-width="2"/></g>
+</defs>
+<!-- Survey lines and rain marks are separate from the building silhouette. -->
+<g stroke="#bda1c8" opacity=".35" stroke-width=".8"><path stroke-dasharray="3 6" d="m36 282 328 95 211-104M52 230l309 91 189-93M102 314l211-106M150 330l211-106M215 347l211-106"/><path d="M46 302l276 80m-278-84 4 8m271 72 5 8m18-3 196-97m-199 93 5 8m192-105 5 8"/></g>
+<g stroke="#a995bf" opacity=".22"><path d="m79 118-7 13m14-3-3 6m79-63-6 11m11-5-3 6m232-44-6 10m147 79-7 12m-1 5-3 5M60 248l-4 7m510-80-5 9m-35 67-4 7m-419-71-5 8"/></g>
+<ellipse cx="311" cy="321" rx="218" ry="61" fill="url(#puddle)"/>
+<!-- Raised slab and the two sidewalk steps -->
+<g stroke="#9c869e" stroke-width="1.35"><path d="m52 282 178-89 311 89-180 90z" fill="#403047"/><path d="m52 282 309 90v9L52 291z" fill="#2b2038"/><path d="m361 372 180-90v9l-180 90z" fill="#251d34"/><path d="m66 278 297 86 160-79" stroke="#cfadc5" opacity=".6"/><path d="m96 295 17-9m27 22 17-9m30 22 18-9m38 25 16-8m35 23 15-8m83-9 14 4m18-20 14 4m20-22 14 4m21-21 14 4" opacity=".55"/></g>
+<!-- Façade, shop window, interior fittings and the counter -->
+<g transform="matrix(1 .29 0 1 85 167)" stroke="#b99aac" stroke-width="1.35">
+ <path d="M0 0h255v118H0z" fill="url(#front)"/><path d="M0 0h255v118H0z" fill="url(#tiles)"/>
+ <path d="M10 30h182v66H10z" fill="#211827"/><path d="M14 33h174v58H14z" fill="url(#glass)" stroke="#efb5bd"/>
+ <g stroke="none"><path d="M14 73h174v18H14z" fill="#7b4254"/><path d="M14 72h174v4H14z" fill="#f2a4a9"/><path d="M14 74h174v4H14z" fill="#643147"/><use href="#lamp" x="50" y="33"/><use href="#lamp" x="103" y="33"/><use href="#lamp" x="154" y="33"/><use href="#stool" x="38" y="79"/><use href="#stool" x="75" y="79"/><use href="#stool" x="113" y="79"/><use href="#stool" x="151" y="79"/>
+ <path d="M115 72v-8h12v8m-10-8v-5h8v5" fill="#553044"/><path d="m48 72-2-7h7l-1 7m11 0v-5h6v5" fill="#f9c2bd"/><path d="m18 54 16-18h10L18 65zm81 7 22-25h6l-28 33zm36-3 20-22h4l-24 28z" fill="#ffe1d7" opacity=".17"/></g>
+ <path d="M56 32v61m45-61v61m44-61v61M13 55h176" stroke="#423046" stroke-width="3"/><path d="M11 96h180v4H11z" fill="#a06c7e"/>
+ <path d="M201 30h41v87h-41z" fill="#271d31"/><path d="M206 35h31v56h-31z" fill="url(#sideglass)"/><path d="M208 38h27v6h-27z" fill="#604052"/><path d="M207 96h29v16h-29z" fill="#473043"/><path d="M232 77v10" stroke="#ffe0cd" stroke-width="2.5"/><path d="M5 108h187m-187 5h187" stroke="#6c4c63"/>
+ <!-- Front fascia and its two pink tubes -->
+ <path d="M-3 0h261v24H-3z" fill="#39223b"/><path d="M0 5h255M0 19h255" stroke="#ff2e88" stroke-width="6" filter="url(#bloom)"/><path d="M0 5h255M0 19h255" stroke="#ff559b" stroke-width="2.6"/><path d="M0 5h255" stroke="#ffd0de" stroke-width=".8"/>
+</g>
+<!-- Side wall, transoms, panelled metal and a conduit -->
+<g transform="matrix(.86 -.43 0 1 340 240.95)" stroke="#94839e" stroke-width="1.3"><path d="M0 0h184v118H0z" fill="#302438"/><path d="M0 0h184v118H0z" fill="url(#tiles)"/><path d="M12 33h101v61H12z" fill="#251b30"/><path d="M16 36h93v55H16z" fill="url(#sideglass)" stroke="#c192aa"/><path d="M19 74h88v5H19z" fill="#60364b"/><path d="M40 36v55m23-55v55m23-55v55M16 52h93" stroke="#472f41" stroke-width="3"/><path d="M11 96h105v4H11z" fill="#725369"/><path d="M129 42h37v74h-37z" fill="#211b2e"/><path d="M134 48h26v36h-26z" fill="url(#grille)"/><path d="M158 92v6m15-74v81l5 4v9"/><path d="M-1 0h186v24H-1z" fill="#33223b"/><path d="M0 5h184M0 19h184" stroke="#ff2e88" stroke-width="5" filter="url(#bloom)"/><path d="M0 5h184M0 19h184" stroke="#ef6097" stroke-width="2"/></g>
+<!-- Roof, seams, ducts and an extraction fan -->
+<g stroke="#b09cb8" stroke-width="1.4"><path d="m77 163 165-82 265 77-167 83z" fill="url(#roof)"/><path d="m77 163 263 78v7L77 171z" fill="#67465d"/><path d="m340 241 167-83v8l-167 82z" fill="#453046"/><path d="m89 163 153-75 251 71-154 76z" fill="#372a41"/><path d="m100 164 143-70 240 67m-357-2 215 64m-168-87 218 64m-172-87 217 65" stroke="#76637e" stroke-width="1"/>
+ <path d="m211 132 66 19 34-17-64-19z" fill="#75627a"/><path d="m211 132 66 19v15l-66-19z" fill="#4b3b54"/><path d="m277 151 34-17v15l-34 17z" fill="#2a2236"/><path d="m218 138 52 15m-52-12 52 15m-52-12 52 15" stroke="#a38a9e" stroke-width="1"/>
+ <g transform="matrix(1 .29 -.86 .43 262 133)"><circle r="13" fill="#2a2336"/><circle r="10"/><circle r="6"/><path d="M-13 0h26M0-13v26m-9-22L9 9M9-9-9 9" stroke-width=".9"/></g>
+ <path d="m329 168 20 6 18-9-20-6z" fill="#776279"/><path d="m329 168 20 6v6l-20-6z" fill="#41334c"/><path d="m349 174 18-9v6l-18 9z" fill="#30263a"/><path d="M342 166v-18l9-4v20" fill="#68546d"/><path d="m337 148 11-6 10 3-12 6z" fill="#b79cb2"/>
+ <path d="m418 148 8 2 7-3-8-2z" fill="#9b849c"/><path d="M426 147v-33m-10 5 19 6m-18-10 18 5" stroke="#bdabba"/></g>
+<!-- A blade sign above the entrance: a hand-bent cup, not a replacement logo. -->
+<g transform="matrix(.88 -.44 0 1 305 223)" stroke-linejoin="round"><path d="M16-41h33m-33 6h33" stroke="#b29bae" stroke-width="2.3"/><rect x="-3" y="-52" width="30" height="37" rx="4" fill="#302039" stroke="#ff569e" stroke-width="2"/><path d="M3-34h13v5q0 6-6 6t-7-6zm13 1h4q3 4-4 6M3-20h15m-9-19q4-3 0-6m5 6q4-3 0-6" stroke="#feb3d0" stroke-width="1.3"/></g>
+<g stroke="#cfc9ec" opacity=".68" stroke-width=".9"><path d="M257 120 218 71h-66m235 198 64 18h68"/><circle cx="257" cy="120" r="2" fill="#cfc9ec"/><circle cx="387" cy="269" r="2" fill="#cfc9ec"/></g><g fill="#cfc9ec" font-family="monospace" font-size="10" letter-spacing="1.5"><text x="122" y="74">A.01</text><text x="523" y="291">A.02</text></g>
+<g stroke="#27e3c4" opacity=".62" stroke-width="1"><path d="m113 319 27 8m-15-2 22 6m238 35 20-10m3-1 9-4"/></g></svg>

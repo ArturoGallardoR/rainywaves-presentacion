@@ -1,0 +1,78 @@
+{
+  "moneda": "MXN",
+  "textos": {
+    "lista": "De lista",
+    "testimonio": "Con testimonio",
+    "desde": "desde {precio}",
+    "entrega": "Entrega",
+    "mensual": "Mantenimiento",
+    "opcional": "{precio}/mes, opcional",
+    "unidades": { "mes": "/mes", "hora": "/hora" }
+  },
+  "condiciones": {
+    "anticipo": 50,
+    "entrega": 50,
+    "pago": { "texto": "El otro {entrega} % se paga a la entrega." },
+    "oferta": {
+      "texto": "Precio especial a cambio de un testimonio y permiso para mostrar el proyecto en mi portafolio."
+    },
+    "dominio": {
+      "servicio": "dominio-hosting",
+      "texto": "Dominio y hosting del primer año van aparte, a costo: aprox. {precio}."
+    }
+  },
+  "paquetes": {
+    "basico": {
+      "nombre": "Básico",
+      "incluye": [
+        "Página con lo que más te preguntan",
+        "Formulario de preinscripción a Google Sheets",
+        "Alta y optimización de ficha de Google",
+        "Ajustes básicos de SEO, que te encuentren en Google"
+      ],
+      "precio": { "lista": 8500, "testimonio": 6500 },
+      "plazo": "5–7 días hábiles",
+      "mensual": { "precio": 500, "incluye": "mantenimiento y hosting básico" }
+    },
+    "intermedio": {
+      "nombre": "Intermedio",
+      "incluye": [
+        "Todo lo del Básico",
+        "Panel con alumnos, grupos y cupos",
+        "Estado de pago registrado a mano",
+        "Exportación a Excel"
+      ],
+      "precio": { "lista": 16000, "testimonio": 12000 },
+      "plazo": "3–4 semanas",
+      "mensual": { "precio": 900 }
+    },
+    "pro": {
+      "nombre": "Pro",
+      "incluye": [
+        "Todo lo del Intermedio",
+        "Una herramienta interna a tu medida",
+        "Roles de usuario: cada quien ve lo suyo"
+      ],
+      "precio": { "lista": 28000, "testimonio": 22000, "testimonioDesde": true, "condicion": "según alcance" },
+      "plazo": "5–7 semanas",
+      "mensual": { "precio": 1500 }
+    }
+  },
+  "servicios": {
+    "landing": { "nombre": "Página de aterrizaje (landing page)", "precio": 8500, "rango": [5000, 10000], "plazo": "5–7 días hábiles" },
+    "sitio-informativo": { "nombre": "Sitio informativo de aprox. 5 páginas", "precio": 14000, "rango": [10000, 20000], "plazo": "2–3 semanas" },
+    "formulario-sheets": { "nombre": "Formulario conectado a Google Sheets", "precio": 2200, "rango": [1500, 3000], "plazo": "2–3 días hábiles" },
+    "ficha-google": { "nombre": "Alta y optimización de tu ficha de Google", "precio": 3500, "rango": [2500, 4500], "plazo": "3–5 días hábiles", "nota": "La verificación depende de Google." },
+    "seo-basico": { "nombre": "Ajustes básicos de SEO en tu página", "precio": 2500, "rango": [1500, 3500], "plazo": "3–5 días hábiles" },
+    "ficha-mensual": { "nombre": "Gestión mensual de tu ficha de Google", "precio": 800, "unidad": "mes", "rango": [500, 1000] },
+    "seo-local": { "nombre": "SEO local mensual", "precio": 4000, "unidad": "mes", "rango": [3000, 6000], "nota": "Resultados en aprox. 3–6 meses; no prometo posiciones." },
+    "panel-inscripciones": { "nombre": "Panel de inscripciones o base de datos simple", "precio": 10000, "rango": [8000, 14000], "plazo": "2–3 semanas" },
+    "herramienta-interna": { "nombre": "Herramienta interna pequeña", "precio": 18000, "rango": [12000, 30000], "plazo": "3–5 semanas" },
+    "sistema-mediano": { "nombre": "Sistema a la medida mediano", "precio": 45000, "rango": [30000, 80000], "plazo": "6–10 semanas" },
+    "automatizacion": { "nombre": "Automatización con Sheets, Forms y correo", "precio": 5500, "rango": [3000, 10000], "plazo": "1–2 semanas" },
+    "capacitacion": { "nombre": "Capacitación de 1–2 horas", "precio": 2000, "rango": [1500, 3000] },
+    "consultoria": { "nombre": "Consultoría de inteligencia artificial y procesos", "precio": 900, "unidad": "hora", "rango": [600, 1200] },
+    "mantenimiento": { "nombre": "Mantenimiento y hosting", "precio": 900, "unidad": "mes", "rango": [500, 1500] },
+    "dominio-hosting": { "nombre": "Dominio y hosting del primer año, a costo", "precio": 1300, "rango": [1000, 1500] }
+  }
+}

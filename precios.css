@@ -1,0 +1,22 @@
+#precios h2 {font-size:clamp(36px,4.1vw,82px)}
+.oferta {margin-top:clamp(20px,3.5vh,45px);color:var(--vidrio)}
+.paquetes {display:grid;grid-auto-columns:minmax(0,1fr);grid-auto-flow:column;gap:clamp(14px,1.6vw,32px)}
+.paquete {display:flex;flex-direction:column;gap:12px;border:1px solid var(--borde);border-radius:4px;padding:clamp(18px,1.8vw,40px);background:linear-gradient(120deg,#281d3a,#1b152e)}
+.paquete.destacado {border-color:var(--rosa)}
+.paquete h3 {color:var(--texto)}
+.incluye,.cifras,.pie-precios {font-size:clamp(14px,1.12vw,23px);line-height:1.5}
+.cifras {margin-top:auto;padding-top:14px}
+.cifras div {display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-top:1px solid var(--borde);padding:7px 0}
+.cifras dt {color:var(--vidrio)}
+.cifras dd {font:clamp(24px,2.45vw,49px)/1.15 Tilt,system-ui;color:var(--texto);text-align:right}
+.cifras .testimonio dd {font-size:clamp(22px,2.05vw,41px);color:var(--vidrio)}
+.destacado .testimonio dd {color:var(--rosa)}
+.cifras .plazo dd {font:inherit}
+.pie-precios {margin-top:clamp(15px,2.7vh,34px)}
+@media(max-width:700px) {
+  .paquetes {grid-auto-flow:row}
+  .paquete {gap:6px;padding:16px}
+  .paquete h3 {font-size:25px}
+  .cifras {padding-top:3px}
+  .cifras div {padding:4px 0}
+}
